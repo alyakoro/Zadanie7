@@ -12,9 +12,13 @@ abstract class PizzaSity(
     abstract fun sicilianPizzaPrice()
     abstract fun typoleanPizzaPrice()
     fun showStatistics(){
-        println("$sicilianPizzaCount")
-        println("$neapolitanPizzaCount")
-        println("$romanPizzaCount")
-        println("$typoleanPizzaCount")
+        println("Проданно сицилийской пиццы: $sicilianPizzaCount")
+        println("Проданно неаполианской пиццы: $neapolitanPizzaCount")
+        println("Проданно римской пиццы: $romanPizzaCount")
+        println("Проданно тирольской пиццы: $typoleanPizzaCount")
+
+        val money = sicilianPizzaCount * sicilianPizzaPrice + neapolitanPizzaCount * neapolitanPizzaPrice +
+                romanPizzaCount * romanPizzaPrice + typoleanPizzaCount * typoleanPizzaPrice
+        println("Всего заработано денег: $money")
     }
 }

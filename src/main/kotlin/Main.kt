@@ -23,14 +23,32 @@ fun main() {
                 exitProcess(1)
             }
         }
-
+        fun selectAddService(currentPizzaSity:PizzaSity) {
+            when (currentPizzaSity) {
+                is ChekPhoto -> pizzaMoscow.showCheckPhoto()
+                is Drink -> currentPizzaSity.drinkSale()
+            }
+        }
         println("Выберите пиццу:")
-        println("1. Неаполитанская пицца\n2. Римская пицца\n3. Сицилийская пицца\n4. Тирольская пицца")
+        println("1. Неаполитанская пицца\n2. Римская пицца\n3. Сицилийская пицца\n4. Тирольская пицца\n 0. Показать статистику")
         when (readln()) {
-            "1" -> currentPizzaSity.neapolitanPizzaSale()
-            "2" -> currentPizzaSity.romanPizzaSale()
-            "3" -> currentPizzaSity.sicilianPizzaSale()
-            "4" -> currentPizzaSity.typoleanPizzaSale()
+            "1" -> {
+                currentPizzaSity.neapolitanPizzaSale()
+                selectAddService(currentPizzaSity)
+            }
+            "2" -> {
+                currentPizzaSity.romanPizzaSale()
+                selectAddService(currentPizzaSity)
+            }
+            "3" -> {
+                currentPizzaSity.sicilianPizzaSale()
+                selectAddService(currentPizzaSity)
+            }
+            "4" -> {
+                currentPizzaSity.typoleanPizzaSale()
+                selectAddService(currentPizzaSity)
+            }
+            "0" -> currentPizzaSity.showStatistics()
 
             else -> {
                 println("ERROR")
@@ -38,9 +56,6 @@ fun main() {
             }
         }
 
-        when (currentPizzaSity) {
-            is ChekPhoto -> pizzaMoscow.showCheckPhoto()
-            else -> pizzaPeter.drinkSale()
-        }
+
     }
 }
