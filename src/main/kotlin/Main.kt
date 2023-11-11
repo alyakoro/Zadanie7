@@ -1,15 +1,39 @@
 import kotlin.system.exitProcess
 fun main() {
+
+    val pizzaPeter = PizzaPeter(
+        neapolitanPizzaPrice = 175.3, romanPizzaPrice = 241.5,
+        sicilianPizzaPrice = 167.5, typoleanPizzaPrice = 215.0
+    )
+    val pizzaMoscow = PizzaMoscow(
+        neapolitanPizzaPrice = 215.3, romanPizzaPrice = 250.5,
+        sicilianPizzaPrice = 180.5, typoleanPizzaPrice = 248.0
+    )
+    val currentPizzaSity:PizzaSity
+
     println("Добрый день! Выберите город")
     println("1.Москва\n2.Санкт-Петербург\n")
 
-    val city = readln()
-    if (city == "1"){
+    currentPizzaSity = when (readln()){
+        "1" -> pizzaMoscow
+        "2" -> pizzaPeter
+        else -> {
+            println("ERROR")
+            exitProcess(1)
+        }
+    }
 
-    } else if (city == "2"){
+    println("Выберите пиццу:")
+    println("1. Неаполитанская пицца\n2. Римская пицца\n3. Сицилийская пицца\n4. Тирольская пицца")
+    when(readln()){
+        "1" -> currentPizzaSity.neapolitanPizzaSale()
+        "2" -> currentPizzaSity.romanPizzaSale()
+        "3" -> currentPizzaSity.sicilianPizzaSale()
+        "4" -> currentPizzaSity.typoleanPizzaSale()
 
-    }else{
-        println("ERROR")
-        exitProcess(1)
+        else -> {
+            println("ERROR")
+            exitProcess(1)
+        }
     }
 }
