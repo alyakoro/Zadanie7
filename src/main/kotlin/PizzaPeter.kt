@@ -8,7 +8,10 @@ class PizzaPeter (
     override fun drinkSale() {
         println("Вы будете кофе?")
         println("1. Да\n2. Нет")
-        if (readln() == "1") println("С вас 200 рублей")
+        if (readln() == "1") {
+            cofeCount++
+            println("С вас 200 рублей")
+        }
     }
     override fun neapolitanPizzaSale() {
         neapolitanPizzaCount++

@@ -14,22 +14,22 @@ fun main() {
         println("Добрый день! Выберите город")
         println("1.Москва\n2.Санкт-Петербург\n0.Выйти из программы")
 
-        currentPizzaSity = when (readln()) {
-            "1" -> pizzaMoscow
-            "2" -> pizzaPeter
-            "0" -> break
-            else -> {
-                println("ERROR")
-                continue
+        val city = readln()
+        if (city == "1"){
+            currentPizzaSity = pizzaMoscow}
+        else if (city == "2") {
+            currentPizzaSity = pizzaPeter}
+        else {
+            println("ERROR")
+            continue
             }
-        }
 
         println("Выберите пиццу:")
         println("1. Неаполитанская пицца\n2. Римская пицца\n3. Сицилийская пицца\n4. Тирольская пицца\n0. Показать статистику")
-        selectPizza(currentPizzaSity)
+        selectPizza(currentPizzaSity, city)
     }
 }
-private fun selectPizza(currentPizzaSity: PizzaCity) {
+private fun selectPizza(currentPizzaSity: PizzaCity, city: String) {
     when (readln()) {
 
         "1" -> {
@@ -52,7 +52,8 @@ private fun selectPizza(currentPizzaSity: PizzaCity) {
             selectAddService(currentPizzaSity)
         }
 
-        "0" -> currentPizzaSity.showStatistics()
+        "0" -> currentPizzaSity.showStatistics(city)
+
 
         else -> {
             println("ERROR")
@@ -63,6 +64,7 @@ private fun selectPizza(currentPizzaSity: PizzaCity) {
 fun selectAddService(currentPizzaSity:PizzaCity) {
     when (currentPizzaSity) {
         is ChekPhoto -> currentPizzaSity.showCheckPhoto()
+        is ChekPhoto -> currentPizzaSity.showChek()
         is Drink -> currentPizzaSity.drinkSale()
     }
 }
