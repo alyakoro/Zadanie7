@@ -1,7 +1,15 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import kotlin.system.exitProcess
+fun main() {
+    println("Добрый день! Выберите город")
+    println("1.Москва\n2.Санкт-Петербург\n")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val city = readln()
+    if (city == "1"){
+
+    } else if (city == "2"){
+
+    }else{
+        println("ERROR")
+        exitProcess(1)
+    }
 }
