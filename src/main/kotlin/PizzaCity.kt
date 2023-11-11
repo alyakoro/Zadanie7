@@ -8,17 +8,19 @@ abstract class PizzaCity(
     var typoleanPizzaCount = 0
     var checkCount = 0
     var cofeCount = 0
+    var money_ch = 0
+    var money_cof = 0
 
     abstract fun neapolitanPizzaSale()
     abstract fun romanPizzaSale()
     abstract fun sicilianPizzaSale()
     abstract fun typoleanPizzaSale()
     fun showChek(){
-        val money_ch = checkCount * 50
+        money_ch = checkCount * 50
         println("Вам будет скидка $money_ch рублей с покупки")
     }
     fun cofeChek(){
-        val money_cof = cofeCount * 200
+        money_cof = cofeCount * 200
         println("Общая сумма выручки за кофе = $money_cof")
     }
     fun showStatistics(city: String){
@@ -27,10 +29,18 @@ abstract class PizzaCity(
         println("Проданно римской пиццы: $romanPizzaCount")
         println("Проданно тирольской пиццы: $typoleanPizzaCount")
 
-        val money = sicilianPizzaCount * sicilianPizzaPrice + neapolitanPizzaCount * neapolitanPizzaPrice +
-                romanPizzaCount * romanPizzaPrice + typoleanPizzaCount * typoleanPizzaPrice
 
-        if (city == "2")cofeChek()
-        println("Всего заработано денег: $money")
+        if (city == "2"){
+            cofeChek()
+            val money_spb = sicilianPizzaCount * sicilianPizzaPrice + neapolitanPizzaCount * neapolitanPizzaPrice +
+                    romanPizzaCount * romanPizzaPrice + typoleanPizzaCount * typoleanPizzaPrice + money_cof * cofeCount
+            println("Всего заработано денег: $money_spb")
+        }
+        else {
+                val money_mos = sicilianPizzaCount * sicilianPizzaPrice + neapolitanPizzaCount * neapolitanPizzaPrice +
+                        romanPizzaCount * romanPizzaPrice + typoleanPizzaCount * typoleanPizzaPrice - money_ch * checkCount
+                println("Всего заработано денег: $money_mos")
+        }
+
     }
 }
