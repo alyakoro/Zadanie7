@@ -15,13 +15,16 @@ abstract class PizzaCity(
     abstract fun romanPizzaSale()
     abstract fun sicilianPizzaSale()
     abstract fun typoleanPizzaSale()
+    var all = 0
     fun showChek(){
         money_ch = checkCount * 50
         println("Вам будет скидка $money_ch рублей с покупки")
     }
+    var pros_coff = 0.0
     fun cofeChek(){
         money_cof = cofeCount * 200
         println("Общая сумма выручки за кофе = $money_cof")
+        pros_coff = ((cofeCount / all.toDouble()) * 100)
     }
     fun showStatistics(city: String){
         println("Проданно сицилийской пиццы: $sicilianPizzaCount")
@@ -32,6 +35,7 @@ abstract class PizzaCity(
 
         if (city == "2"){
             cofeChek()
+            println("Процент людей, покупающие кофе: $pros_coff%")
             val money_spb = sicilianPizzaCount * sicilianPizzaPrice + neapolitanPizzaCount * neapolitanPizzaPrice +
                     romanPizzaCount * romanPizzaPrice + typoleanPizzaCount * typoleanPizzaPrice + money_cof * cofeCount
             println("Всего заработано денег: $money_spb")

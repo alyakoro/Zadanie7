@@ -4,7 +4,6 @@ class PizzaPeter (
     ): PizzaCity(
         neapolitanPizzaPrice, romanPizzaPrice, sicilianPizzaPrice, typoleanPizzaPrice
     ), Drink {
-
     override fun drinkSale() {
         println("Вы будете кофе?")
         println("1. Да\n2. Нет")
@@ -12,6 +11,7 @@ class PizzaPeter (
             cofeCount++
             println("С вас 200 рублей")
         }
+        all++
     }
     override fun neapolitanPizzaSale() {
         neapolitanPizzaCount++

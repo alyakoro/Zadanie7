@@ -1,3 +1,5 @@
 interface Drink {
-    fun drinkSale()
+    fun drinkSale(){
+    }
+
 }

@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c07237f-5473-4a8b-8448-8f5c1a7c89c4" name="Changes" comment="Z7">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Drink.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Drink.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/PizzaCity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/PizzaCity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/PizzaPeter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/PizzaPeter.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +100,33 @@
       <option name="project" value="LOCAL" />
       <updated>1699701390990</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Z7">
+      <created>1699701733685</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699701733685</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Z7" />
     <option name="LAST_COMMIT_MESSAGE" value="Z7" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/PizzaCity.kt</url>
+          <line>23</line>
+          <properties class="PizzaCity" method="cofeChek">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
