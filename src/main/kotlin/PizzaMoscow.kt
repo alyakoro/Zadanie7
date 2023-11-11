@@ -5,7 +5,7 @@ class PizzaMoscow(
     neapolitanPizzaPrice, romanPizzaPrice, sicilianPizzaPrice, typoleanPizzaPrice
 ), ChekPhoto {
     override fun showCheckPhoto() {
-        println("Вы фотография чека?")
+        println("У вас есть фотография чека?")
         println("1. Да\n2. Нет")
         if (readln() == "1") println("Вам будет скидка 50 рублей с покупки")
     }
