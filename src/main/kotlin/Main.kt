@@ -9,16 +9,22 @@ fun main() {
         neapolitanPizzaPrice = 215.3, romanPizzaPrice = 250.5,
         sicilianPizzaPrice = 180.5, typoleanPizzaPrice = 248.0
     )
+    val pizzaAbakan = PizzaAbakan(
+        neapolitanPizzaPrice = 190.3, romanPizzaPrice = 222.5,
+        sicilianPizzaPrice = 130.5, typoleanPizzaPrice = 200.0
+    )
     var currentPizzaSity: PizzaCity
     while (true) {
         println("Добрый день! Выберите город")
-        println("1.Москва\n2.Санкт-Петербург\n0.Выйти из программы")
+        println("1.Москва\n2.Санкт-Петербург\n3.Абакан\n0.Выйти из программы")
 
         val city = readln()
         if (city == "1"){
-            currentPizzaSity = pizzaMoscow}
+            currentPizzaSity = pizzaMoscow }
         else if (city == "2") {
-            currentPizzaSity = pizzaPeter}
+            currentPizzaSity = pizzaPeter }
+        else if (city == "3"){
+            currentPizzaSity == pizzaAbakan }
         else {
             println("ERROR")
             continue
