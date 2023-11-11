@@ -1,5 +1,5 @@
 interface Drink {
-    fun drinkSale(){
+    fun drinkSale(i:Int){
     }
 
 }

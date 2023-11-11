@@ -4,14 +4,15 @@ class PizzaPeter (
     ): PizzaCity(
         neapolitanPizzaPrice, romanPizzaPrice, sicilianPizzaPrice, typoleanPizzaPrice
     ), Drink {
-    override fun drinkSale() {
+    override fun drinkSale(i: Int) {
         println("Вы будете кофе?")
         println("1. Да\n2. Нет")
         if (readln() == "1") {
+            num_coff += "$i"
             cofeCount++
             println("С вас 200 рублей")
         }
-        all++
+        all_c++
     }
     override fun neapolitanPizzaSale() {
         neapolitanPizzaCount++

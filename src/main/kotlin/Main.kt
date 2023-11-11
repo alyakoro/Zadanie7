@@ -34,22 +34,22 @@ private fun selectPizza(currentPizzaSity: PizzaCity, city: String) {
 
         "1" -> {
             currentPizzaSity.neapolitanPizzaSale()
-            selectAddService(currentPizzaSity)
+            selectAddService(currentPizzaSity,1)
         }
 
         "2" -> {
             currentPizzaSity.romanPizzaSale()
-            selectAddService(currentPizzaSity)
+            selectAddService(currentPizzaSity,2)
         }
 
         "3" -> {
             currentPizzaSity.sicilianPizzaSale()
-            selectAddService(currentPizzaSity)
+            selectAddService(currentPizzaSity,3)
         }
 
         "4" -> {
             currentPizzaSity.typoleanPizzaSale()
-            selectAddService(currentPizzaSity)
+            selectAddService(currentPizzaSity,4)
         }
 
         "0" -> currentPizzaSity.showStatistics(city)
@@ -61,10 +61,10 @@ private fun selectPizza(currentPizzaSity: PizzaCity, city: String) {
         }
     }
 }
-fun selectAddService(currentPizzaSity:PizzaCity) {
+fun selectAddService(currentPizzaSity:PizzaCity,num:Int) {
     when (currentPizzaSity) {
         is ChekPhoto -> currentPizzaSity.showCheckPhoto()
         is ChekPhoto -> currentPizzaSity.showChek()
-        is Drink -> currentPizzaSity.drinkSale()
+        is Drink -> currentPizzaSity.drinkSale(num)
     }
 }

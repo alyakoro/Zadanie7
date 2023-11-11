@@ -12,6 +12,7 @@ class PizzaMoscow(
             println("Всего чеков: $checkCount")
             showChek()
         }
+        all_ch++
     }
 
         override fun neapolitanPizzaSale() {
