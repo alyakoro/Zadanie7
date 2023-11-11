@@ -53,12 +53,15 @@ abstract class PizzaCity(
                     romanPizzaCount * romanPizzaPrice + typoleanPizzaCount * typoleanPizzaPrice + money_cof * cofeCount
             println("Всего заработано денег: $money_spb")
         }
-        else {
+        else if (city == "1"){
             showpross()
             println("Процент людей, которые показывают чек: $pros_chek%")
                 val money_mos = sicilianPizzaCount * sicilianPizzaPrice + neapolitanPizzaCount * neapolitanPizzaPrice +
                         romanPizzaCount * romanPizzaPrice + typoleanPizzaCount * typoleanPizzaPrice - money_ch * checkCount
                 println("Всего заработано денег: $money_mos")
+        }
+        else{
+
         }
 
     }
