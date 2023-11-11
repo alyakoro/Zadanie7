@@ -9,31 +9,38 @@ fun main() {
         neapolitanPizzaPrice = 215.3, romanPizzaPrice = 250.5,
         sicilianPizzaPrice = 180.5, typoleanPizzaPrice = 248.0
     )
-    val currentPizzaSity:PizzaSity
+    var currentPizzaSity: PizzaSity
+    while (true) {
+        println("Добрый день! Выберите город")
+        println("1.Москва\n2.Санкт-Петербург\n")
 
-    println("Добрый день! Выберите город")
-    println("1.Москва\n2.Санкт-Петербург\n")
-
-    currentPizzaSity = when (readln()){
-        "1" -> pizzaMoscow
-        "2" -> pizzaPeter
-        else -> {
-            println("ERROR")
-            exitProcess(1)
+        currentPizzaSity = when (readln()) {
+            "1" -> pizzaMoscow
+            "2" -> pizzaPeter
+            "0" -> break
+            else -> {
+                println("ERROR")
+                exitProcess(1)
+            }
         }
-    }
 
-    println("Выберите пиццу:")
-    println("1. Неаполитанская пицца\n2. Римская пицца\n3. Сицилийская пицца\n4. Тирольская пицца")
-    when(readln()){
-        "1" -> currentPizzaSity.neapolitanPizzaSale()
-        "2" -> currentPizzaSity.romanPizzaSale()
-        "3" -> currentPizzaSity.sicilianPizzaSale()
-        "4" -> currentPizzaSity.typoleanPizzaSale()
+        println("Выберите пиццу:")
+        println("1. Неаполитанская пицца\n2. Римская пицца\n3. Сицилийская пицца\n4. Тирольская пицца")
+        when (readln()) {
+            "1" -> currentPizzaSity.neapolitanPizzaSale()
+            "2" -> currentPizzaSity.romanPizzaSale()
+            "3" -> currentPizzaSity.sicilianPizzaSale()
+            "4" -> currentPizzaSity.typoleanPizzaSale()
 
-        else -> {
-            println("ERROR")
-            exitProcess(1)
+            else -> {
+                println("ERROR")
+                exitProcess(1)
+            }
+        }
+
+        when (currentPizzaSity) {
+            is ChekPhoto -> pizzaMoscow.showCheckPhoto()
+            else -> pizzaPeter.drinkSale()
         }
     }
 }

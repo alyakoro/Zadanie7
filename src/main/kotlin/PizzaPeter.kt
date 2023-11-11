@@ -3,7 +3,13 @@ class PizzaPeter (
     val sicilianPizzaPrice: Double, val typoleanPizzaPrice: Double
     ): PizzaSity(
         neapolitanPizzaPrice, romanPizzaPrice, sicilianPizzaPrice, typoleanPizzaPrice
-    ) {
+    ), Drink {
+
+    override fun drinkSale() {
+        println("Вы будете кофе?")
+        println("1. Да\n2. Нет")
+        if (readln() == "1") println("С вас 200 рублей")
+    }
     override fun neapolitanPizzaPrice() {
         neapolitanPizzaCount++
         println("Спасибо за покупку неаполитанской пиццы в Санкт - Петербурге")

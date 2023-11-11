@@ -11,4 +11,10 @@ abstract class PizzaSity(
     abstract fun romanPizzaPrice()
     abstract fun sicilianPizzaPrice()
     abstract fun typoleanPizzaPrice()
+    fun showStatistics(){
+        println("$sicilianPizzaCount")
+        println("$neapolitanPizzaCount")
+        println("$romanPizzaCount")
+        println("$typoleanPizzaCount")
+    }
 }
