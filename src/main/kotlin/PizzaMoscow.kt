@@ -1,32 +1,32 @@
-class PizzaMoscow (
-    val neapolitanPizzaPrice: Double, val romanPizzaPrice: Double
-    val sicilianPizzaPrice: Double, val typoleanPizzaPrice: Double
-): PizzaSity(
+class PizzaMoscow(
+    neapolitanPizzaPrice: Double, romanPizzaPrice: Double,
+    sicilianPizzaPrice: Double, typoleanPizzaPrice: Double
+): PizzaCity(
     neapolitanPizzaPrice, romanPizzaPrice, sicilianPizzaPrice, typoleanPizzaPrice
 ), ChekPhoto {
-    override fun ChekPhoto() {
+    override fun showCheckPhoto() {
         println("Вы фотография чека?")
         println("1. Да\n2. Нет")
         if (readln() == "1") println("Вам будет скидка 50 рублей с покупки")
     }
 
 
-        override fun neapolitanPizzaPrice() {
+        override fun neapolitanPizzaSale() {
             neapolitanPizzaCount++
             println("Спасибо за покупку неаполитанской пиццы в Москве")
         }
 
-        override fun romanPizzaPrice() {
+        override fun romanPizzaSale() {
             romanPizzaCount++
             println("Спасибо за покупку римской пиццы в Москве")
         }
 
-        override fun sicilianPizzaPrice() {
+        override fun sicilianPizzaSale() {
             romanPizzaCount++
             println("Спасибо за покупку сицилийской пиццы в Москве")
         }
 
-        override fun typoleanPizzaPrice() {
+        override fun typoleanPizzaSale() {
             typoleanPizzaCount++
             println("Спасибо за покупку тирольской пиццы в Москве")
         }

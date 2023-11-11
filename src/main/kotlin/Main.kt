@@ -9,7 +9,7 @@ fun main() {
         neapolitanPizzaPrice = 215.3, romanPizzaPrice = 250.5,
         sicilianPizzaPrice = 180.5, typoleanPizzaPrice = 248.0
     )
-    var currentPizzaSity: PizzaSity
+    var currentPizzaSity: PizzaCity
     while (true) {
         println("Добрый день! Выберите город")
         println("1.Москва\n2.Санкт-Петербург\n")
@@ -23,7 +23,7 @@ fun main() {
                 exitProcess(1)
             }
         }
-        fun selectAddService(currentPizzaSity:PizzaSity) {
+        fun selectAddService(currentPizzaSity:PizzaCity) {
             when (currentPizzaSity) {
                 is ChekPhoto -> pizzaMoscow.showCheckPhoto()
                 is Drink -> currentPizzaSity.drinkSale()
