@@ -1,16 +1,18 @@
-class PizzaAbakan (
+class PizzaAbak (
     neapolitanPizzaPrice: Double, romanPizzaPrice: Double,
     sicilianPizzaPrice: Double, typoleanPizzaPrice: Double
-    ): PizzaCity(
+): PizzaCity(
     neapolitanPizzaPrice, romanPizzaPrice, sicilianPizzaPrice, typoleanPizzaPrice
-    ), Drink {
+), Drink {
     override fun drinkSale(i: Int) {
         println("Вы будете кофе?")
         println("1. Да\n2. Нет")
         if (readln() == "1") {
+            num_coff += "$i"
             cofeCount++
             println("С вас 200 рублей")
         }
+        all_c++
     }
     override fun neapolitanPizzaSale() {
         neapolitanPizzaCount++

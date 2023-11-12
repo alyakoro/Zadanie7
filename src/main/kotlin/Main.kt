@@ -9,7 +9,7 @@ fun main() {
         neapolitanPizzaPrice = 215.3, romanPizzaPrice = 250.5,
         sicilianPizzaPrice = 180.5, typoleanPizzaPrice = 248.0
     )
-    val pizzaAbakan = PizzaAbakan(
+    val pizzaAbakan = PizzaAbak(
         neapolitanPizzaPrice = 190.3, romanPizzaPrice = 222.5,
         sicilianPizzaPrice = 130.5, typoleanPizzaPrice = 200.0
     )
@@ -24,7 +24,7 @@ fun main() {
         else if (city == "2") {
             currentPizzaSity = pizzaPeter }
         else if (city == "3"){
-            currentPizzaSity == pizzaAbakan }
+            currentPizzaSity = pizzaAbakan                }
         else {
             println("ERROR")
             continue
