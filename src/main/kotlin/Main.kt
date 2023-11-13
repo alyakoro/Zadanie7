@@ -11,7 +11,7 @@ fun main() {
     )
     val pizzaAbakan = PizzaAbak(
         neapolitanPizzaPrice = 190.3, romanPizzaPrice = 222.5,
-        sicilianPizzaPrice = 130.5, typoleanPizzaPrice = 200.0
+        sicilianPizzaPrice = 130.5, typoleanPizzaPrice = 200.0,
     )
     var currentPizzaSity: PizzaCity
     while (true) {
@@ -24,7 +24,10 @@ fun main() {
         else if (city == "2") {
             currentPizzaSity = pizzaPeter }
         else if (city == "3"){
-            currentPizzaSity = pizzaAbakan                }
+            currentPizzaSity = pizzaAbakan}
+        else if (city == "0"){
+            exitProcess(1)
+        }
         else {
             println("ERROR")
             continue
@@ -69,8 +72,9 @@ private fun selectPizza(currentPizzaSity: PizzaCity, city: String) {
 }
 fun selectAddService(currentPizzaSity:PizzaCity,num:Int) {
     when (currentPizzaSity) {
+        is Drink -> currentPizzaSity.drinkSale(num)
         is ChekPhoto -> currentPizzaSity.showCheckPhoto()
         is ChekPhoto -> currentPizzaSity.showChek()
-        is Drink -> currentPizzaSity.drinkSale(num)
+        is souse -> currentPizzaSity.sousemake()
     }
 }

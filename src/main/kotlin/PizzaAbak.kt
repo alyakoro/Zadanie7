@@ -3,7 +3,7 @@ class PizzaAbak (
     sicilianPizzaPrice: Double, typoleanPizzaPrice: Double
 ): PizzaCity(
     neapolitanPizzaPrice, romanPizzaPrice, sicilianPizzaPrice, typoleanPizzaPrice
-), Drink {
+), Drink, ChekPhoto, souse {
     override fun drinkSale(i: Int) {
         println("Вы будете кофе?")
         println("1. Да\n2. Нет")
@@ -14,23 +14,48 @@ class PizzaAbak (
         }
         all_c++
     }
+    override fun showCheckPhoto() {
+        println("У вас есть фотография чека?")
+        println("1. Да\n2. Нет")
+        if (readln() == "1") {
+            checkCount++
+            println("Всего чеков: $checkCount")
+            showChek()
+        }
+        all_ch++
+    }
+    override fun sousemake() {
+        println("Хотите соус?")
+        println("1. Да\n2. Нет")
+        if (readln() == "1") {
+            println("1. - Кетчуп\n2. - Майонез")
+            if (readln() == "1") {
+                souseCountkek++
+                println("С вас 25 рублей")
+            } else if (readln() == "2") {
+                souseCountmas++
+                println("С вас 20 рублей")
+            }
+        }
+    }
+
     override fun neapolitanPizzaSale() {
         neapolitanPizzaCount++
-        println("Спасибо за покупку неаполитанской пиццы в Санкт - Петербурге")
+        println("Спасибо за покупку неаполитанской пиццы в Абакане")
     }
 
     override fun romanPizzaSale() {
         romanPizzaCount++
-        println("Спасибо за покупку римской пиццы в Санкт - Петербурге")
+        println("Спасибо за покупку римской пиццы в Абакане")
     }
 
     override fun sicilianPizzaSale() {
         romanPizzaCount++
-        println("Спасиюо за покупку сицилийской пиццы в Санкт - Петербурге")
+        println("Спасиюо за покупку сицилийской пиццы в Абакане")
     }
 
     override fun typoleanPizzaSale() {
         typoleanPizzaCount++
-        println("Спасибо за покупку тирольской пиццы в Санкт - Петербурге")
+        println("Спасибо за покупку тирольской пиццы в Абакане")
     }
 }
