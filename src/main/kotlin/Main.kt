@@ -71,10 +71,10 @@ private fun selectPizza(currentPizzaSity: PizzaCity, city: String) {
     }
 }
 fun selectAddService(currentPizzaSity:PizzaCity,num:Int) {
-    when (currentPizzaSity) {
-        is Drink -> currentPizzaSity.drinkSale(num)
-        is ChekPhoto -> currentPizzaSity.showCheckPhoto()
-        is ChekPhoto -> currentPizzaSity.showChek()
-        is souse -> currentPizzaSity.sousemake()
+        if (currentPizzaSity is Drink)
+            currentPizzaSity.drinkSale(num)
+        if (currentPizzaSity is ChekPhoto)
+            currentPizzaSity.showCheckPhoto()
+        if (currentPizzaSity is souse)
+            currentPizzaSity.sousemake()
     }
-}

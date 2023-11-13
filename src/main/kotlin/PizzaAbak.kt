@@ -38,7 +38,6 @@ class PizzaAbak (
             }
         }
     }
-
     override fun neapolitanPizzaSale() {
         neapolitanPizzaCount++
         println("Спасибо за покупку неаполитанской пиццы в Абакане")

@@ -34,8 +34,14 @@ abstract class PizzaCity(
         println("Общая сумма выручки за кофе = $money_cof")
         pros_coff = ((cofeCount / all_c.toDouble()) * 100)
     }
+    var money_souse_kek = 0
+    var money_souse_mas = 0
     fun sous(){
-        println("rjat" + cofeCount + checkCount)
+        money_souse_kek = souseCountkek * 25
+        money_souse_mas = souseCountmas * 20
+        println("Выручка за соус 'Кетчуп': $money_souse_kek")
+        println("Выручка за соус 'Майонез': $money_souse_mas")
+
     }
     fun chet_pizza_cofe(){
         println("Количество людей, покупающих неаполианскую пиццу с кофе: " + num_coff.count{it == "1"} + " в процентах:" + (num_coff.count{it == "1"}/cofeCount.toDouble())*100)
