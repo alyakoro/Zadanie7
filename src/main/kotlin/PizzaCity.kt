@@ -44,10 +44,14 @@ abstract class PizzaCity(
 
     }
     fun chet_pizza_cofe(){
-        println("Количество людей, покупающих неаполианскую пиццу с кофе: " + num_coff.count{it == "1"} + " в процентах:" + (num_coff.count{it == "1"}/cofeCount.toDouble())*100)
-        println("Количество людей, покупающих римскую пиццу с кофе: " + num_coff.count{it == "2"} + " в процентах:" + (num_coff.count{it == "2"}/cofeCount.toDouble())*100)
-        println("Количество людей, покупающих сицилийскую пиццу с кофе: " + num_coff.count{it == "3"} + " в процентах:" + (num_coff.count{it == "3"}/cofeCount.toDouble())*100)
-        println("Количество людей, покупающих тирольскую пиццу с кофе: " + num_coff.count{it == "4"} + " в процентах:" + (num_coff.count{it == "4"}/cofeCount.toDouble())*100)
+        println("Количество людей, покупающих неаполианскую пиццу с кофе: " + num_coff.count{it == "1"} +
+                " в процентах:" + (num_coff.count{it == "1"}/cofeCount.toDouble())*100 + "%")
+        println("Количество людей, покупающих римскую пиццу с кофе: " + num_coff.count{it == "2"} +
+                " в процентах:" + (num_coff.count{it == "2"}/cofeCount.toDouble())*100+ "%")
+        println("Количество людей, покупающих сицилийскую пиццу с кофе: " + num_coff.count{it == "3"} +
+                " в процентах:" + (num_coff.count{it == "3"}/cofeCount.toDouble())*100+ "%")
+        println("Количество людей, покупающих тирольскую пиццу с кофе: " + num_coff.count{it == "4"} +
+                " в процентах:" + (num_coff.count{it == "4"}/cofeCount.toDouble())*100+ "%")
     }
     fun showStatistics(city: String){
         println("Проданно сицилийской пиццы: $sicilianPizzaCount")
@@ -74,8 +78,10 @@ abstract class PizzaCity(
         else{
             cofeChek()
             showChek()
+            sous()
             val money_ab = sicilianPizzaCount * sicilianPizzaPrice + neapolitanPizzaCount * neapolitanPizzaPrice +
-                    romanPizzaCount * romanPizzaPrice + typoleanPizzaCount * typoleanPizzaPrice - money_ch * checkCount + money_cof * cofeCount
+                    romanPizzaCount * romanPizzaPrice + typoleanPizzaCount * typoleanPizzaPrice - money_ch * checkCount +
+                    money_cof * cofeCount + money_souse_kek + money_souse_mas
             println("Всего заработано денег: $money_ab")
         }
 

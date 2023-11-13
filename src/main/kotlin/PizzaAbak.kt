@@ -29,12 +29,16 @@ class PizzaAbak (
         println("1. Да\n2. Нет")
         if (readln() == "1") {
             println("1. - Кетчуп\n2. - Майонез")
-            if (readln() == "1") {
-                souseCountkek++
-                println("С вас 25 рублей")
-            } else if (readln() == "2") {
-                souseCountmas++
-                println("С вас 20 рублей")
+            when (readln()) {
+                "1" -> {
+                    souseCountkek++
+                    println("С вас 25 рублей")
+                }
+
+                "2" -> {
+                    souseCountmas++
+                    println("С вас 20 рублей")
+                }
             }
         }
     }

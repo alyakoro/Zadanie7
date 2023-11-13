@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4c07237f-5473-4a8b-8448-8f5c1a7c89c4" name="Changes" comment="Z7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/PizzaAbak.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/PizzaAbak.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/PizzaCity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/PizzaCity.kt" afterDir="false" />
     </list>
@@ -142,6 +141,17 @@
     </task>
     <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Z7" />
