@@ -15,6 +15,7 @@ fun main() {
     )
     var currentPizzaSity: PizzaCity
     while (true) {
+        println("______________________")
         println("Добрый день! Выберите город")
         println("1.Москва\n2.Санкт-Петербург\n3.Абакан\n0.Выйти из программы")
 

@@ -26,7 +26,7 @@ class PizzaPeter (
 
     override fun sicilianPizzaSale() {
         romanPizzaCount++
-        println("Спасиюо за покупку сицилийской пиццы в Санкт - Петербурге")
+        println("Спасибо за покупку сицилийской пиццы в Санкт - Петербурге")
     }
 
     override fun typoleanPizzaSale() {
